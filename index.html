@@ -1,41 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conecta RH: carreira, empregabilidade e desenvolvimento profissional.">
-  <title>Conecta RH | Carreira e Desenvolvimento</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conecta RH | Carreira e Desenvolvimento</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topo">
-    <a class="marca" href="#inicio" aria-label="Conecta RH - início"><span class="marca-icone">CRH</span><span>Conecta <b>RH</b></span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-    <nav id="menu" class="menu">
-      <a href="#inicio">Início</a><a href="#vagas">Vagas</a><a href="#curriculo">Currículo</a><a href="#entrevista">Entrevista</a><a href="#desenvolvimento">Desenvolvimento</a><a href="#contato">Contato</a>
-    </nav>
-  </header>
-  <main>
-    <section id="inicio" class="hero">
-      <div class="hero-conteudo">
-        <span class="etiqueta">SUA CARREIRA, NOVAS POSSIBILIDADES</span>
-        <h1>Conectando talentos a <span>oportunidades.</span></h1>
-        <p>Informação, orientação e ferramentas para você fortalecer sua trajetória profissional e conquistar novos caminhos.</p>
-        <div class="acoes"><a class="botao primario" href="#vagas">Explorar oportunidades</a><a class="botao secundario" href="#curriculo">Melhorar meu currículo</a></div>
+<header>
+  <nav class="nav">
+    <a class="logo" href="#inicio">Conecta<span>RH</span></a>
+    <button class="menu" onclick="toggleMenu()">☰</button>
+    <div id="links" class="links">
+      <a href="#inicio">Início</a>
+      <a href="#vagas">Vagas</a>
+      <a href="#curriculo">Currículo</a>
+      <a href="#entrevista">Entrevista</a>
+      <a href="#desenvolvimento">Desenvolvimento</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <div>
+    <p class="tag">CARREIRA • EMPREGABILIDADE • RH</p>
+    <h1>Conecte-se com o seu próximo passo profissional.</h1>
+    <p>Informações simples e práticas para ajudar você a se preparar para o mercado de trabalho.</p>
+    <a class="button" href="#conteudos">Conheça o site</a>
+  </div>
+  <div class="hero-card">
+    <div class="icon">👥</div>
+    <h3>Seu desenvolvimento começa aqui.</h3>
+    <p>Currículo, entrevistas, oportunidades e desenvolvimento em um só lugar.</p>
+  </div>
+</section>
+
+<section id="conteudos" class="section">
+  <p class="tag">CONTEÚDOS</p>
+  <h2>O que você procura?</h2>
+  <div class="grid">
+    <article class="card"><span>💼</span><h3>Oportunidades</h3><p>Organize sua busca por vagas e entenda melhor o processo de candidatura.</p><a href="#vagas">Ver dicas →</a></article>
+    <article class="card"><span>📄</span><h3>Currículo</h3><p>Aprenda a apresentar suas experiências e competências de forma objetiva.</p><a href="#curriculo">Ver dicas →</a></article>
+    <article class="card"><span>🎤</span><h3>Entrevistas</h3><p>Prepare-se para responder perguntas e demonstrar seu potencial.</p><a href="#entrevista">Ver dicas →</a></article>
+    <article class="card"><span>🚀</span><h3>Desenvolvimento</h3><p>Conheça atitudes e competências importantes para sua carreira.</p><a href="#desenvolvimento">Ver dicas →</a></article>
+  </div>
+</section>
+
+<section id="vagas" class="section alt">
+  <p class="tag">01 • VAGAS</p>
+  <h2>Como organizar sua busca</h2>
+  <div class="tips">
+    <p><b>Defina seu objetivo:</b> escolha cargos compatíveis com seu perfil e seus interesses.</p>
+    <p><b>Atualize seus dados:</b> mantenha telefone, e-mail e informações profissionais corretos.</p>
+    <p><b>Pesquise a empresa:</b> conhecer a organização ajuda na preparação para o processo seletivo.</p>
+  </div>
+</section>
+
+<section id="curriculo" class="section">
+  <p class="tag">02 • CURRÍCULO</p>
+  <h2>Monte seu currículo profissional</h2>
+  <p class="section-intro">Preencha os campos abaixo e veja uma prévia do seu currículo. Você pode imprimir ou salvar em PDF para usar na sua candidatura.</p>
+
+  <div class="cv-layout">
+    <form id="cvForm" class="cv-form">
+      <h3>1. Dados pessoais e objetivo</h3>
+      <label for="cvNome">Nome completo *</label>
+      <input id="cvNome" name="cvNome" required placeholder="Ex.: Maria da Silva">
+      <div class="cv-fields">
+        <div><label for="cvEmail">E-mail *</label><input id="cvEmail" name="cvEmail" type="email" required placeholder="voce@email.com"></div>
+        <div><label for="cvTelefone">Telefone</label><input id="cvTelefone" name="cvTelefone" placeholder="(00) 00000-0000"></div>
       </div>
-      <div class="hero-card"><div class="bolha">✦</div><p class="card-legenda">SEU PRÓXIMO PASSO COMEÇA AQUI</p><h2>Aprenda. Prepare-se. Conquiste.</h2><div class="linha-progresso"><span></span></div><p class="pequeno">Pequenos passos também levam longe.</p></div>
-    </section>
-    <section class="intro"><p class="sobretitulo">COMO PODEMOS AJUDAR?</p><h2>Ferramentas para avançar na carreira</h2><p class="texto-centro">Encontre orientações práticas para cada etapa da sua vida profissional.</p></section>
-    <section id="vagas" class="secao">
-      <div class="cabecalho-secao"><div><p class="sobretitulo">OPORTUNIDADES</p><h2>Prepare-se para novas vagas</h2></div><span class="icone-secao">↗</span></div>
-      <div class="grade tres"><article class="bloco"><div class="icone">⌕</div><h3>Onde procurar vagas</h3><p>Pesquise em plataformas de emprego, páginas de empresas e canais profissionais. Confira sempre a legitimidade do anúncio.</p><a href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener">Buscar no LinkedIn ↗</a></article><article class="bloco"><div class="icone">✓</div><h3>Leia os requisitos</h3><p>Compare as competências solicitadas com suas experiências e destaque habilidades relevantes para a oportunidade.</p><a href="#curriculo">Preparar currículo →</a></article><article class="bloco"><div class="icone">◎</div><h3>Acompanhe candidaturas</h3><p>Anote a empresa, a vaga, a data de inscrição e o retorno recebido para organizar sua busca.</p><a href="#contato">Fale com o Conecta RH →</a></article></div>
-    </section>
-    <section id="curriculo" class="secao fundo-claro"><div class="cabecalho-secao"><div><p class="sobretitulo">SEU CURRÍCULO</p><h2>Mostre o seu potencial</h2><p class="subtexto">Um currículo objetivo facilita a leitura e destaca o que você pode oferecer.</p></div></div><div class="grade dois"><article class="bloco lista-bloco"><h3>Checklist de currículo</h3><ul><li>Dados de contato atualizados</li><li>Objetivo profissional claro</li><li>Experiências e resultados relevantes</li><li>Formação acadêmica e cursos</li><li>Revisão de ortografia e formatação</li></ul></article><article class="bloco dica-bloco"><div class="icone">✦</div><h3>Dica importante</h3><p>Adapte o currículo para cada vaga. Use palavras relacionadas aos requisitos da oportunidade e descreva suas experiências com clareza, sem inventar informações.</p><a href="https://www.gov.br/pt-br/servicos/buscar-emprego-no-sistema-nacional-de-emprego-sine" target="_blank" rel="noopener">Conhecer serviços de emprego ↗</a></article></div></section>
-    <section id="entrevista" class="secao"><div class="cabecalho-secao"><div><p class="sobretitulo">PROCESSO SELETIVO</p><h2>Chegue mais confiante à entrevista</h2></div></div><div class="grade tres"><article class="passo"><span>01</span><h3>Pesquise a empresa</h3><p>Conheça a atuação, os valores e a descrição da vaga.</p></article><article class="passo"><span>02</span><h3>Pratique respostas</h3><p>Prepare exemplos reais sobre suas experiências, habilidades e aprendizados.</p></article><article class="passo"><span>03</span><h3>Prepare suas perguntas</h3><p>Tire dúvidas sobre as atividades, a equipe e as próximas etapas do processo.</p></article></div></section>
-    <section id="desenvolvimento" class="secao desenvolvimento"><div><p class="sobretitulo">DESENVOLVIMENTO PROFISSIONAL</p><h2>Seu aprendizado não para na contratação.</h2><p>Desenvolva competências técnicas e comportamentais, busque feedback e estabeleça metas realistas para seu crescimento.</p></div><div class="tags"><span>Comunicação</span><span>Trabalho em equipe</span><span>Organização</span><span>Aprendizagem contínua</span><span>Liderança</span></div></section>
-    <section id="contato" class="secao contato"><p class="sobretitulo">FALE CONOSCO</p><h2>Vamos conectar você ao próximo passo?</h2><p>Este projeto é informativo e busca apoiar o desenvolvimento profissional e a empregabilidade.</p><a class="botao primario" href="mailto:contato@conectarh.com.br" id="contatoEmail">Entrar em contato</a><p class="aviso">Modelo demonstrativo acadêmico. As vagas e os serviços externos são disponibilizados por seus respectivos responsáveis.</p></section>
-  </main>
-  <footer><a class="marca marca-rodape" href="#inicio"><span class="marca-icone">CRH</span><span>Conecta <b>RH</b></span></a><p>Carreira, empregabilidade e desenvolvimento profissional.</p><p>© <span id="ano"></span> Conecta RH · Projeto acadêmico</p></footer>
-  <script src="script.js"></script>
+      <label for="cvCidade">Cidade/Estado</label>
+      <input id="cvCidade" name="cvCidade" placeholder="Ex.: Campinas - SP">
+      <label for="cvObjetivo">Objetivo profissional *</label>
+      <input id="cvObjetivo" name="cvObjetivo" required placeholder="Ex.: Auxiliar administrativo">
+      <label for="cvResumo">Resumo profissional</label>
+      <textarea id="cvResumo" name="cvResumo" rows="3" placeholder="Resuma suas principais competências e experiências."></textarea>
+
+      <h3>2. Experiência profissional</h3>
+      <p class="cv-help">Informe empresa, cargo, período e atividades. Se ainda não trabalhou, você pode escrever “Em busca da primeira oportunidade”.</p>
+      <label for="cvExperiencia">Experiências</label>
+      <textarea id="cvExperiencia" name="cvExperiencia" rows="5" placeholder="Empresa — Cargo (mês/ano a mês/ano)&#10;• Principais atividades e responsabilidades&#10;• Resultados ou aprendizados"></textarea>
+
+      <h3>3. Formação e cursos</h3>
+      <label for="cvFormacao">Formação acadêmica *</label>
+      <textarea id="cvFormacao" name="cvFormacao" rows="3" required placeholder="Curso — Instituição — situação ou ano de conclusão"></textarea>
+      <label for="cvCursos">Cursos e certificações</label>
+      <textarea id="cvCursos" name="cvCursos" rows="3" placeholder="Nome do curso — instituição — ano"></textarea>
+      <label for="cvHabilidades">Competências e habilidades</label>
+      <textarea id="cvHabilidades" name="cvHabilidades" rows="3" placeholder="Ex.: organização, comunicação, Excel, atendimento ao cliente"></textarea>
+
+      <div class="cv-actions">
+        <button class="button" type="submit">Gerar meu currículo</button>
+        <button class="button button-secondary" type="button" id="cvClear">Limpar campos</button>
+      </div>
+      <p class="cv-help">Dica: use informações verdadeiras, revise a escrita e adapte o objetivo à vaga desejada. Os dados preenchidos ficam nesta página para demonstração e não são enviados a um servidor.</p>
+      <p id="cvStatus" role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="cv-preview-wrap">
+      <div class="cv-preview-heading">
+        <div><p class="tag">PRÉVIA</p><h3>Seu currículo</h3></div>
+        <button class="button" type="button" id="cvPrint">Imprimir / Salvar PDF</button>
+      </div>
+      <article id="cvPreview" class="cv-preview">
+        <h2 id="previewNome">Seu nome completo</h2>
+        <p id="previewContato" class="preview-contact">E-mail • Telefone • Cidade/Estado</p>
+        <hr>
+        <h3>Objetivo profissional</h3><p id="previewObjetivo">Seu objetivo aparecerá aqui.</p>
+        <div id="previewResumoBlock"><h3>Resumo profissional</h3><p id="previewResumo">Seu resumo aparecerá aqui.</p></div>
+        <div id="previewExperienciaBlock"><h3>Experiência profissional</h3><p id="previewExperiencia">Suas experiências aparecerão aqui.</p></div>
+        <h3>Formação acadêmica</h3><p id="previewFormacao">Sua formação aparecerá aqui.</p>
+        <div id="previewCursosBlock"><h3>Cursos e certificações</h3><p id="previewCursos">Seus cursos aparecerão aqui.</p></div>
+        <div id="previewHabilidadesBlock"><h3>Competências e habilidades</h3><p id="previewHabilidades">Suas habilidades aparecerão aqui.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="entrevista" class="section alt">
+  <p class="tag">03 • ENTREVISTA</p>
+  <h2>Prepare-se para conversar</h2>
+  <div class="tips">
+    <p><b>Pesquise a empresa:</b> entenda sua área de atuação e seus valores.</p>
+    <p><b>Pratique:</b> pense em exemplos de situações profissionais que demonstrem suas competências.</p>
+    <p><b>Seja autêntico:</b> responda com clareza e mantenha uma comunicação respeitosa.</p>
+  </div>
+</section>
+
+<section id="desenvolvimento" class="section">
+  <p class="tag">04 • DESENVOLVIMENTO</p>
+  <h2>Invista em você</h2>
+  <div class="grid two">
+    <article class="card"><h3>Comunicação</h3><p>Pratique escuta ativa, clareza e objetividade.</p></article>
+    <article class="card"><h3>Organização</h3><p>Planeje tarefas e estabeleça prioridades.</p></article>
+    <article class="card"><h3>Aprendizado</h3><p>Busque cursos, leituras e experiências que ampliem suas competências.</p></article>
+    <article class="card"><h3>Adaptabilidade</h3><p>Esteja aberto a mudanças e novos desafios.</p></article>
+  </div>
+</section>
+
+<section id="contato" class="section contact">
+  <p class="tag">CONTATO</p>
+  <h2>Fale com o Conecta RH</h2>
+  <form onsubmit="sendForm(event)">
+    <input id="nome" required placeholder="Seu nome">
+    <input id="email" type="email" required placeholder="Seu e-mail">
+    <textarea id="mensagem" required placeholder="Sua mensagem"></textarea>
+    <button class="button" type="submit">Enviar mensagem</button>
+  </form>
+  <p id="status"></p>
+</section>
+</main>
+
+<footer>
+  <strong>Conecta RH</strong>
+  <p>Projeto acadêmico • Gestão de Recursos Humanos</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
